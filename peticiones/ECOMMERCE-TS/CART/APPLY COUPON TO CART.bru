@@ -1,0 +1,38 @@
+meta {
+  name: APPLY COUPON TO CART
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/api/v1/cart/apply-coupon/65a6ad66aa18bc7d5a6209ed
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWRlNWY3YmExZTI5MjFjMGViMjNkOSIsImVtYWlsIjoiYmliaWJyZXNjaWFAZ21haWwuY29tIiwiaWF0IjoxNzA1MzYzNTQxLCJleHAiOjE3MDU0NDk5NDF9.n21-Or1AG-PGxoKb53BM10IHOtAIM2eMBcGJ5eHp2Z0
+}
+
+body:json {
+  {
+      "productsCoupons": [
+          {
+              "productId": "65a5afc86d30d4ae64ac0fe2", // Mac Pro: precio -> 600 -> 540
+              "couponId": "65a6a7574176807ae36d8f37" // descuento: 10% -> 60
+          },
+          {
+              "productId": "65a5afe56d30d4ae64ac0fe9", // iphone 14: precio -> 700 -> 560
+              "couponId": "65a6a7694176807ae36d8f3d" // descuento: 20% -> 140
+          },
+          {
+              "productId": "65a5b0286d30d4ae64ac0ff7", //acer: precio -> 500 -> 300
+              "couponId": "65a6a77e4176807ae36d8f43" // descuento: 40% -> 200
+          },
+          {
+              "productId": "65a5b03a6d30d4ae64ac0ffe", // play station: precio -> 500 -> 250
+              "couponId": "65a6a78b4176807ae36d8f49" //  descuento 50% -> 250
+          }
+      ]
+  }
+}

@@ -1,0 +1,21 @@
+meta {
+  name: ADD TO WISHLIST
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/v1/products/add-wishlist
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTEzN2ZlN2IzZTE4OTM3MzQ2NTAxMyIsImVtYWlsIjoiZGFuaXRoZXJldjk4QGdtYWlsLmNvbSIsImlhdCI6MTcwNTA2NTczMSwiZXhwIjoxNzA1MTUyMTMxfQ.vQzJOKigFeX82CNw-XsSjjqj-C8v1iYQE8zMHGyAEgo
+}
+
+body:json {
+  {
+      "product":"65a02b13203dfa1f51cc662e"
+  }
+}

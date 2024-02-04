@@ -1,0 +1,16 @@
+meta {
+  name: UPLOAD IMAGES
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8080/api/v1/products/images/multiple/products
+  body: multipartForm
+  auth: none
+}
+
+body:form-urlencoded {
+  file: undefined
+  file: undefined
+}

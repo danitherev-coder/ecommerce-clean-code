@@ -1,0 +1,17 @@
+meta {
+  name: GET PRODUCTS BY BRAND
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://localhost:8080/api/v1/products/brand
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "brandId":"65a01b0729a91d39dbb13fce"
+  }
+}

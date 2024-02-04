@@ -1,0 +1,21 @@
+meta {
+  name: UPDATE USER
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:8080/api/v1/users/65a137fe7b3e189373465013
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTEzN2ZlN2IzZTE4OTM3MzQ2NTAxMyIsImVtYWlsIjoiZGFuaXRoZXJldjk4QGdtYWlsLmNvbSIsImlhdCI6MTcwNTA2NTczMSwiZXhwIjoxNzA1MTUyMTMxfQ.vQzJOKigFeX82CNw-XsSjjqj-C8v1iYQE8zMHGyAEgo
+}
+
+body:json {
+  {
+      "password":"1234561"
+  }
+}

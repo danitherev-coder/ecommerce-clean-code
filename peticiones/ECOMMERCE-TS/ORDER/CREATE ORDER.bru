@@ -1,0 +1,15 @@
+meta {
+  name: CREATE ORDER
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/v1/orders/create-order
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWRlNWY3YmExZTI5MjFjMGViMjNkOSIsImVtYWlsIjoiYmliaWJyZXNjaWFAZ21haWwuY29tIiwiaWF0IjoxNzA2NDc3NzIyLCJleHAiOjE3MDY1NjQxMjJ9.-tkpksSNoixnw0B9Ib-is6r6tK_JUfmmfr5RXXv7fBc
+}

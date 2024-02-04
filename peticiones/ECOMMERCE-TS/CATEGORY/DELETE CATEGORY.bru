@@ -1,0 +1,15 @@
+meta {
+  name: DELETE CATEGORY
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:8080/api/v1/categories/65a57843283b6d102ed2e1fd
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWRlNWY3YmExZTI5MjFjMGViMjNkOSIsImVtYWlsIjoiYmliaWJyZXNjaWFAZ21haWwuY29tIiwiaWF0IjoxNzA1MzMxMjAyLCJleHAiOjE3MDU0MTc2MDJ9.qgsagTTim8dHweEp9r_LKcYtYxGx1Op2FbTW_SGDElY
+}

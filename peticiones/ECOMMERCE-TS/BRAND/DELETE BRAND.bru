@@ -1,0 +1,21 @@
+meta {
+  name: DELETE BRAND
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8080/api/v1/brands/659ffda93977e19e7b6dba98
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OWRlNWY3YmExZTI5MjFjMGViMjNkOSIsImVtYWlsIjoiYmliaWJyZXNjaWFAZ21haWwuY29tIiwiaWF0IjoxNzA1MzIzOTk2LCJleHAiOjE3MDU0MTAzOTZ9.7FV34z9kKvZE3lFyTGZdWUpX3EQ40QtIjK275n7qEdE
+}
+
+body:json {
+  {
+      "name":"zte"
+  }
+}
