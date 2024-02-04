@@ -3,11 +3,12 @@ import { UploadedFile } from 'express-fileupload';
 import cloudinary from 'cloudinary';
 import { AddWishlist, CreateProduct, CreateProductDTO, CreateWishlistDTO, DeleteProduct, DeleteProductDTO, GetProduct, GetProductByBrand, GetProductByCategory, GetProducts, PaginationDto, ProductRepository, UpdateProduct, UpdateProductDTO, UploadImage, UploadImagesDTO } from "../../domain";
 import { handleErrors } from "../errorHandler/errorHandler";
+import { envs } from "../../config";
 
 cloudinary.v2.config({
-    cloud_name: 'dpyr2wyaf',
-    api_key: '846634682136411',
-    api_secret: 'q3mJGEPShDL5r92iI5C_hCoEh6I',
+    cloud_name: envs.CLOUD_NAME,
+    api_key: envs.API_KEY,
+    api_secret: envs.API_SECRET,
     // secure: true
 })
 

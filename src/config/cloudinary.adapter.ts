@@ -1,11 +1,12 @@
 import cloudinary from 'cloudinary';
 import { UploadedFile } from 'express-fileupload';
 import fs from 'fs';
+import { envs } from './envs';
 
 cloudinary.v2.config({
-    cloud_name: 'dpyr2wyaf',
-    api_key: '846634682136411',
-    api_secret: 'q3mJGEPShDL5r92iI5C_hCoEh6I',
+    cloud_name: envs.CLOUD_NAME,
+    api_key: envs.API_KEY,
+    api_secret: envs.API_SECRET,
     // secure: true
 })
 
@@ -16,9 +17,9 @@ export class CloudinaryAdapter {
     constructor() {
         this.cloudinary = cloudinary.v2;
         this.cloudinary.config({
-            cloud_name: 'dpyr2wyaf',
-            api_key: '846634682136411',
-            api_secret: 'q3mJGEPShDL5r92iI5C_hCoEh6I',
+            cloud_name: envs.CLOUD_NAME,
+            api_key: envs.API_KEY,
+            api_secret: envs.API_SECRET,
             // secure: true
         });
     }
@@ -38,13 +39,10 @@ export class CloudinaryAdapter {
         return urls;
     }
 
-    delete = async (public_ids: string) => {
-        console.log(public_ids, 'estoy pasando los ids?');
-        const eliminar = await this.cloudinary.uploader.destroy(public_ids);
-        console.log(eliminar, 'estoy eliminando algo en mi funcion?');
+    delete = async (public_ids: string) => {        
+        await this.cloudinary.uploader.destroy(public_ids);        
         // for (const public_id of public_ids) {
-        //     const eliminando = await this.cloudinary.uploader.destroy(public_id);
-        //     console.log(eliminando, 'estoy eliminando algo en mi funcion?');
+        //     const eliminando = await this.cloudinary.uploader.destroy(public_id);        
         // }
     }
 }
