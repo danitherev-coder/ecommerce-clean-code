@@ -39,12 +39,17 @@ To run this project, you will need to set the following environment variables:
 
 - `MAILER_SERVICE=`: E-mail service to be used (smtp, gmail, sendgrid, mailgun, etc.). Example: `MAILER_SERVICE=gmail`
 
-- `MAILER_EMAIL=`: E-mail address for the mail service. Example: `MAILER_EMAIL=example@gmail.com`
+- `MAILER_EMAIL=`: E-mail address for the mail service. Example: `MAILER_EMAIL=danitherev98@gmail.com`
 
-- `MAILER_SECRET_KEY=`: Secret key for the mail service (application password for gmail, API key for sendgrid, API key for mailgun, etc.). Example: `MAILER_SECRET_KEY=34efrgeg5ersd`
+- `MAILER_SECRET_KEY=`: Secret key for the mail service (application password for gmail, API key for sendgrid, API key for mailgun, etc.). Example: `MAILER_SECRET_KEY=abcde4dffd435`
 
 - `ACCESS_TOKEN=`: Access token for Mercado Pago. Example: `ACCESS_TOKEN=TEST-23234234234344556-011615-ab896cb202bce7d3902449c04cdcb736-1640035341`
 
+- `CLOUD_NAME=`: Your Cloudinary account's cloud name.
+
+- `API_KEY=`: Your Cloudinary account's API key.
+
+- `API_SECRET=`: Your Cloudinary account's API secret.
 
 ## Prerequisites
 Make sure you have PNPM installed. If you don't have it, you can install it by running the following command:
